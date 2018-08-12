@@ -29,9 +29,9 @@
       return;
     }
 
-    payLess = Math.floor(price.value / num.value / unit.value) * 100;
+    payLess = Math.floor(price.value / num.value / unit.value) * unit.value;
     short = price.value - payLess * num.value;
-    payMore = Math.ceil(price.value / num.value / unit.value) * 100;
+    payMore = Math.ceil(price.value / num.value / unit.value) * unit.value;
     over = Math.abs(price.value - payMore * num.value);
     if (over === 0 && short === 0) {
       str = "一人" + price.value / num.value + "円ちょうどです！";
